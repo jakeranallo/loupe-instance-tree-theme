@@ -31,7 +31,7 @@ const cssLoader = isLocal => ({
     modules: true,
     '-autoprefixer': true,
     importLoaders: true,
-    localIdentName: isLocal ? 'rstcustom__[local]' : null,
+    localIdentName: isLocal ? 'ldtf__[local]' : null,
   },
 });
 
@@ -41,7 +41,7 @@ const config = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'ReactSortableTreeThemeFileExplorer',
+    library: 'LoupeDefinitionTreeTheme',
   },
   devtool: 'source-map',
   plugins: [

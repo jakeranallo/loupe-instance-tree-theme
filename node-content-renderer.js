@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styles from './node-content-renderer.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styles from './node-content-renderer.scss'
 
 function isDescendant(older, younger) {
   return (
@@ -9,7 +9,7 @@ function isDescendant(older, younger) {
     older.children.some(
       child => child === younger || isDescendant(child, younger)
     )
-  );
+  )
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -45,12 +45,12 @@ class CustomThemeNodeContentRenderer extends Component {
       isOver, // Not needed, but preserved for other renderers
       parentNode, // Needed for dndManager
       ...otherProps
-    } = this.props;
-    const nodeTitle = title || node.title;
-    const nodeSubtitle = subtitle || node.subtitle;
+    } = this.props
+    const nodeTitle = title || node.title
+    const nodeSubtitle = subtitle || node.subtitle
 
-    const isDraggedDescendant = draggedNode && isDescendant(draggedNode, node);
-    const isLandingPadActive = !didDrop && isDragging;
+    const isDraggedDescendant = draggedNode && isDescendant(draggedNode, node)
+    const isLandingPadActive = !didDrop && isDragging
 
     const nodeContent = connectDragPreview(
       <div
@@ -64,7 +64,7 @@ class CustomThemeNodeContentRenderer extends Component {
         }
         style={{
           opacity: isDraggedDescendant ? 0.5 : 1,
-          ...style,
+          ...style
         }}
       >
         <div
@@ -84,7 +84,7 @@ class CustomThemeNodeContentRenderer extends Component {
                 ? nodeTitle({
                     node,
                     path,
-                    treeIndex,
+                    treeIndex
                   })
                 : nodeTitle}
             </span>
@@ -95,7 +95,7 @@ class CustomThemeNodeContentRenderer extends Component {
                   ? nodeSubtitle({
                       node,
                       path,
-                      treeIndex,
+                      treeIndex
                     })
                   : nodeSubtitle}
               </span>
@@ -114,7 +114,7 @@ class CustomThemeNodeContentRenderer extends Component {
           </div>
         </div>
       </div>
-    );
+    )
 
     return (
       <div style={{ height: '100%' }} {...otherProps}>
@@ -128,12 +128,11 @@ class CustomThemeNodeContentRenderer extends Component {
                 className={
                   node.expanded ? styles.collapseButton : styles.expandButton
                 }
-                style={{ left: -0.5 * scaffoldBlockPxWidth }}
                 onClick={() =>
                   toggleChildrenVisibility({
                     node,
                     path,
-                    treeIndex,
+                    treeIndex
                   })
                 }
               />
@@ -159,7 +158,7 @@ class CustomThemeNodeContentRenderer extends Component {
             : nodeContent}
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -179,8 +178,8 @@ CustomThemeNodeContentRenderer.defaultProps = {
   swapFrom: null,
   swapLength: null,
   title: null,
-  toggleChildrenVisibility: null,
-};
+  toggleChildrenVisibility: null
+}
 
 CustomThemeNodeContentRenderer.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.node),
@@ -216,7 +215,7 @@ CustomThemeNodeContentRenderer.propTypes = {
   parentNode: PropTypes.shape({}), // Needed for dndManager
   // Drop target
   canDrop: PropTypes.bool,
-  isOver: PropTypes.bool.isRequired,
-};
+  isOver: PropTypes.bool.isRequired
+}
 
-export default CustomThemeNodeContentRenderer;
+export default CustomThemeNodeContentRenderer
