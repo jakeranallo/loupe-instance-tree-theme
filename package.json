@@ -19,12 +19,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/frontend-collective/react-sortable-tree-theme-full-node-drag"
+    "url": "https://github.com/jakeranallo/loupe-definition-tree-theme"
   },
-  "homepage": "https://github.com/frontend-collective/react-sortable-tree-theme-full-node-drag",
-  "bugs": "https://github.com/frontend-collective/react-sortable-tree-theme-full-node-drag/issues",
+  "homepage": "https://github.com/jakeranallo/loupe-definition-tree-theme",
+  "bugs": "https://github.com/jakeranallo/loupe-definition-tree-theme/issues",
   "authors": [
-    "Chris Fritz"
+    "Loupe"
   ],
   "license": "MIT",
   "jest": {
