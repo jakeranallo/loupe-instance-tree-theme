@@ -1,1 +1,1 @@
-# Loupe Definition Tree Theme
+# Loupe Instance Tree Theme

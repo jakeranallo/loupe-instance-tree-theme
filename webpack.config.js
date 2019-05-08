@@ -31,7 +31,7 @@ const cssLoader = isLocal => ({
     modules: true,
     '-autoprefixer': true,
     importLoaders: true,
-    localIdentName: isLocal ? 'ldtf__[local]' : null,
+    localIdentName: isLocal ? 'litf__[local]' : null,
   },
 });
 
@@ -41,7 +41,7 @@ const config = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'LoupeDefinitionTreeTheme',
+    library: 'LoupeInstanceTreeTheme',
   },
   devtool: 'source-map',
   plugins: [
