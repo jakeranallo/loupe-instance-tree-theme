@@ -59,6 +59,24 @@ class App extends Component {
             treeData={treeData}
             onChange={this.updateTreeData}
             canDrag={({ node }) => !node.dragDisabled}
+            generateNodeProps={() => ({
+              buttons: [
+                <button
+                  style={{
+                    padding: 0,
+                    borderRadius: '100%',
+                    backgroundColor: 'gray',
+                    color: 'white',
+                    width: 16,
+                    height: 16,
+                    border: 0,
+                    fontWeight: 100
+                  }}
+                >
+                  i
+                </button>
+              ]
+            })}
           />
         </div>
       </div>

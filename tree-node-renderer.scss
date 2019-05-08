@@ -3,6 +3,7 @@
   white-space: nowrap;
   position: relative;
   text-align: left;
+  height: 28px;
 }
 
 .rst__node.rst__rtl {
@@ -24,11 +25,13 @@
   height: 100%;
   position: relative;
   display: inline-block;
+  border-radius: 5px;
 }
 
 .rst__absoluteLineBlock {
   position: absolute;
   top: 0;
+  border-radius: 5px;
 }
 
 .rst__lineHalfHorizontalRight::before,
@@ -37,8 +40,9 @@
 .rst__lineHalfVerticalBottom::after {
   position: absolute;
   content: '';
-  background-color: #383F4B;
-  width: 3px;
+  background-color: #464F5E;
+  width: 2px;
+  border-radius: 5px;
 }
 
 /**
@@ -49,15 +53,17 @@
  * +-----+
  */
 .rst__lineHalfHorizontalRight::before {
-  height: 3px;
+  height: 2px;
   top: 50%;
   right: 1px;
   width: 100%;
+  border-radius: 5px;
 }
 
 .rst__rtl.rst__lineHalfHorizontalRight::before {
   left: 0;
   right: initial;
+  border-radius: 5px;
 }
 
 /**
@@ -70,10 +76,11 @@
 .rst__lineFullVertical::after,
 .rst__lineHalfVerticalTop::after,
 .rst__lineHalfVerticalBottom::after {
-  width: 3px;
+  width: 2px;
   left: -1px;
   top: 0;
   height: 100%;
+  border-radius: 5px;
 }
 
 /**

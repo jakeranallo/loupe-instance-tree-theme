@@ -149,8 +149,10 @@ class CustomThemeNodeContentRenderer extends Component {
 
         <div
           className={
-            styles.rowWrapper +
-            (!canDrag ? ` ${styles.rowWrapperDragDisabled}` : '')
+            node.expanded
+              ? styles.rowWrapperExpanded
+              : styles.rowWrapper +
+                (!canDrag ? ` ${styles.rowWrapperDragDisabled}` : '')
           }
         >
           {canDrag
