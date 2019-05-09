@@ -14,8 +14,10 @@
     "test": "jest"
   },
   "main": "dist/main.js",
+  "typings": "index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
